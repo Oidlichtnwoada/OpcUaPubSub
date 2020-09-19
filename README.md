@@ -1,8 +1,8 @@
 1. The applications for the publisher and the subscriber can be easily started by 
 changing the constants for the publisher and subscriber board (development boards - both must run the Linux 
 kernel with an RT patch - both have armv7 support - both must run an SSH server) in the script 
-**evaluate_on_board.py** and then starting the script itself. Both boards must have a synchronized real-time clock. Therefore, you need to setup a Linux implementation of the PTP protocol of your choice, assure that its running and then you need to synchronize this clock to **CLOCK_REALTIME** using the **phc2sys** command. This script will also produce csv output 
-as a file and it will also print the results of time measurements on the command line. 
+**evaluate_on_board.py** and then starting the script itself. This script will also produce csv output 
+as a file and it will also print the results of time measurements on the command line. Both boards must have a synchronized real-time clock. Therefore, you need to setup a Linux implementation of the PTP protocol of your choice, assure that its running and then you need to synchronize the PTP clock to **CLOCK_REALTIME** using the **phc2sys** command. 
 2. The application can be improved by adding a real data source instead of a stupid increasing counter. 
 A new **uint64** source can easily be added by replacing "*publishValue = *publishValue + 1;" in the opcua_publisher.c file 
 with a suitable assignment from a sensor source.
