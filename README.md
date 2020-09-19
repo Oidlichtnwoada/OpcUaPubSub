@@ -13,7 +13,7 @@ the opening and closing of gates must be adapted too, as your QBV config tool ma
 prepared before the gates open again. This leads to little jitter during publishing. The subscriber board can leave all its gates open as 
 it constantly listens for incoming packets. If the switch is configured properly, overall measured jitter should be pretty low. 
 The period of operation is secured with a real-time operating system on publisher and subscriber side and the **clock_nanosleep** 
-function assures that the publisher is waked to prepare the message before sending.
+function assures that the publisher is waked to prepare the message while the gates are closed.
 4. Some general information include that building is done via **docker**, the application start, configuring of 
 the nodes and evaluation of logs is done in **Python** and the applications for the publisher and subscriber 
 themselves are written in C using the open62541 stack. All measures were taken to minimize latency at the 
