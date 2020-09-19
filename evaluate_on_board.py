@@ -51,7 +51,7 @@ SUB_SSH_PASSWORD = ''
 SUB_INTERFACE = 'sw0p5'
 
 # build whole project to work with the newest executables
-run('build.sh', shell=True, check=True, capture_output=True)
+run('./build.sh', shell=True, check=True, capture_output=True)
 
 # connect to publisher board
 pub_ssh_client = SSHClient()
