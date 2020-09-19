@@ -8,7 +8,7 @@ A new **uint64** source can easily be added by replacing "*publishValue = *publi
 with a suitable assignment from a sensor source.
 3. Things left to do is the VLAN configuration of the dedicated TSN switch (UDP multicast and VLAN support needed) in the network 
 topology that connects both boards and to adapt the VLAN configuration of both boards too accordingly. The QBV config, which configures 
-the opening and closing of gates must be adapted, too. The dynamically created QBV config file **qbv.cfg** closes all gates for 
+the opening and closing of gates must be adapted too, as your QBV config tool may have a different syntax. The dynamically created QBV config file **qbv.cfg** closes all gates for 
 **MAX_PUBLISH_DELAY_NS** and then opens them again for the rest of the cycle time. This is done such that the publisher packet can be 
 prepared before the gates open again. This leads to little jitter during publishing. The subscriber board can leave all its gates open as 
 it constantly listens for incoming packets. If the switch is configured properly, overall measured jitter should be pretty low. 
