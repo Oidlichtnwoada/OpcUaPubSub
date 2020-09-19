@@ -23,7 +23,7 @@ global variables that would be needed to do this. But global variables make foll
 since data cannot be only propagated through parameters, but also through global variables. I also used the amalgamated c file of 
 the open62541 stack, as all available header files are too high level for this application. Therefore, I introduced 
 the "-z muldefs" option to the linker, as the c file has no include guard and functions appear twice to the linker. 
-Maybe performance can be improved by changing the standard queuing discipline of linux, which is pfifo_fast, to anything else.
+Maybe performance can be improved by changing the standard queuing discipline of Linux, which is pfifo_fast, to anything else.
 I assured with the right ToS flags that the pubsub traffic is always on the fastest band. Each application starts three threads. 
 One thread that does the 
 setup and starts the other two threads: one thread for the OPC UA server (low priority) and one thread for publishing and 
