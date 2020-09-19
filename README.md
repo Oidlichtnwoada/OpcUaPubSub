@@ -16,7 +16,7 @@ The period of operation is secured with a real-time operating system on publishe
 function assures that the publisher is waked to prepare the message while the gates are closed.
 4. Building in the project is done via **docker**, the application start, configuring of 
 the nodes and evaluation of logs is done in **Python** and the applications for the publisher and subscriber 
-themselves are written in C using the open62541 stack. All measures were taken to minimize latency at the 
+themselves are written in **C** using the open62541 stack. All measures were taken to minimize latency at the 
 device level. All memory allocated should be freed during a normal execution of the program, however when some component fails 
 unexpectedly, memory is not freed by the program, but from the OS afterwards. This was done in order to not introduce too many 
 global variables that would be needed to do this. But global variables make following the information flow harder, 
